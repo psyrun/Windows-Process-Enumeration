@@ -16,11 +16,11 @@ void ListProcesses() {
 
     // Set the size of the structure before using it.
     pe32.dwSize = sizeof(PROCESSENTRY32);
-
+  //handle
     // Retrieve information about the first process,
     // and exit if unsuccessful.
     if (!Process32First(hProcessSnap, &pe32)) {
-        _tprintf(_T("Process32First failed.\n")); // Show cause of failure
+        _tprintf(_T("Process32First failed.\n")); // Show cause of failure  
         CloseHandle(hProcessSnap);               // Clean the snapshot object
         return;
     }
